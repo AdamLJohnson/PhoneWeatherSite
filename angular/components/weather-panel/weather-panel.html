@@ -1,7 +1,16 @@
 <div class="panel-heading">
     <h3 class="panel-title">
+    	{{$ctrl.title}}
+    	<img class="alertIcon" src="../images/urgent.png" ng-show="$ctrl.weatherData.data.hazard.length > 0"/>
     </h3>
 </div>
-<div class="panel-body">
-    
+<div class="panel-body" ng-show="$ctrl.weatherData">
+    <img ng-show="$ctrl.weatherData.currentobservation.Weatherimage && $ctrl.weatherData.currentobservation.Weatherimage != 'NULL'" err-src="" ng-src="{{$ctrl.weatherData.currentobservation.Weatherimage && $ctrl.weatherData.currentobservation.Weatherimage != 'NULL' ? 'http://forecast.weather.gov/newimages/large/' + $ctrl.weatherData.currentobservation.Weatherimage : ''}}" class="WeatherIcon">
+    <span class="weatherText">
+    	<span class="nowrap">
+    		{{$ctrl.weatherData.currentobservation.Temp}} °F
+    		<span ng-show="$ctrl.weatherData.currentobservation.Weather != 'NA'">{{$ctrl.weatherData.currentobservation.Weather}}</span>
+    	</span>
+    </span>
+    <div class="forecastText">{{$ctrl.weatherData.time.startPeriodName[0]}}: {{$ctrl.weatherData.data.weather[0]}}</div>
 </div>

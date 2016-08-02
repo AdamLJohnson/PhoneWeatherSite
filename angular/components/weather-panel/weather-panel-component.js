@@ -1,29 +1,29 @@
 (function( window, angular, undefined ){  
   'use strict';
   angular.module('components')
-  .controller('weatherPanelCtrl', ['$window', '$element', function WeatherPanelCtrl($window, $element) {  
+  .controller('weatherPanelCtrl', ['$window', '$element', '$http', function WeatherPanelCtrl($window, $element, $http) {  
     var self = this;
-    
+
     var layers = [];
     this.$onChanges = function (changesObj) {
+      
     };    
 
     this.$onInit = function () {
-      updatePanel();
-      setInterval(updatePanel, weatherRefresh);
+      
     }
+
+    updatePanel();
+    setInterval(updatePanel, weatherRefresh);    
 
     function updatePanel(){
       var el = $element[0];
       var lat = self.lat;
       var lon = self.lon;
 
-      getWeatherData(lat, lon, function success(data) {
-        updatePanelData(el, data);
-      }, function fail(err) {
-        var bodyElement = el.getElementsByClassName('panel-body')[0];
-        bodyElement.innerHTML = err;
-      });   
+      $http.get(getWeatherURL(lat, lon)).then(function(response) {      
+        self.weatherData = response.data;
+      });
     };
 
     function updatePanelData(el, data){
