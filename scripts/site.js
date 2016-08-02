@@ -15,7 +15,7 @@ function formatDate(date) {
 function getWeatherData(lat, lon, success, fail)
 {
 	var request = new XMLHttpRequest();
-	request.open('GET', 'http://forecast.weather.gov/MapClick.php?lat=' + lat + '&lon=' + lon + '&unit=0&lg=english&FcstType=json', true);
+	request.open('GET', '//forecast.weather.gov/MapClick.php?lat=' + lat + '&lon=' + lon + '&unit=0&lg=english&FcstType=json', true);
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
