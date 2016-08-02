@@ -1,6 +1,10 @@
 ﻿var timeRefresh = .5 * 60 * 1000; //30 seconds
 var weatherRefresh = 30 * 60 * 1000; // 30 minutes
 
+function getWeatherURL(lat, lon) {
+	return '//forecast.weather.gov/MapClick.php?lat=' + lat + '&lon=' + lon + '&unit=0&lg=english&FcstType=json';
+}
+
 function formatDate(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -15,7 +19,7 @@ function formatDate(date) {
 function getWeatherData(lat, lon, success, fail)
 {
 	var request = new XMLHttpRequest();
-	request.open('GET', '//forecast.weather.gov/MapClick.php?lat=' + lat + '&lon=' + lon + '&unit=0&lg=english&FcstType=json', true);
+	request.open('GET', getWeatherURL(lat, lon), true);
 
 	request.onload = function() {
 	  if (request.status >= 200 && request.status < 400) {
