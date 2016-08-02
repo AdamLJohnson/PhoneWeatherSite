@@ -1,0 +1,22 @@
+{
+  "name": "PhoneWeatherSite",
+  "authors": [
+    "Adam Johnson <columbus@adamlj.com>"
+  ],
+  "description": "Site to display the weather on Polycom phones",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.8"
+  }
+}
