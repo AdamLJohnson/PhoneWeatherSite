@@ -1,0 +1,29 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="header">
+        <img class="logo" src="images/appgeo-logo.png" />
+        <span class="time" id="time"></span>
+        <hr />
+    </div>
+
+    <div class="panels multiPanel" id="panels">
+        <div data-lat="30.3347" data-lon="-97.7819" data-title="Austin" class="panel panel-default weatherPanel"></div>
+        <div data-lat="42.3651" data-lon="-71.0178" data-title="Boston" class="panel panel-default weatherPanel"></div>
+        <div data-lat="39.4151" data-lon="-119.656" data-title="Carson" class="panel panel-default weatherPanel clear"></div>
+        <div data-lat="38.6268" data-lon="-121.563" data-title="Sacramento" class="panel panel-default weatherPanel"></div>
+    </div>
+    
+    <script src="scripts/site.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

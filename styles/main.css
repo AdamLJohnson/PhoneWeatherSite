@@ -1,0 +1,100 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-size: 15pt;*/
+}
+
+.logo {
+    max-width: 75px;
+}
+
+hr {
+    margin-top: 0;
+}
+
+.panel-default {
+    border-color: #ddd;
+}
+
+.panel {
+    background-color: #333;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5px;
+    margin-left: 5px;
+    min-height: 68px;
+}
+
+.panels.multiPanel .panel {
+    width: 140px;
+    font-size: 10pt;
+}
+
+.panels.multiPanel .weatherPanel {
+    float: left;
+}
+
+.panel-default > .panel-heading {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #333;
+}
+
+.panel-heading {
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 1px 5px;
+}
+
+.panel-title {
+    color: inherit;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.panel-body {
+    padding: 3px;
+}
+
+.weatherText {
+    margin-left: 25px;
+    display: block;
+    min-height: 20px;
+}
+
+img.WeatherIcon {
+    max-height: 20px;
+    float: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.header .time {
+    position: absolute;
+    right: 8px;
+    top: 15px;
+}
+
+.alertIcon {
+    max-height: 16px;
+    position: relative;
+    top: 2px;
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Weather</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="appApp">
+    <div class="header">
+        <img class="logo" src="../images/appgeo-logo.png" />
+        <current-time class="time"></current-time>
+        <hr />
+    </div>
+
+    <div class="panels multiPanel" id="panels">
+        <weather-panel data-lat="30.3347" data-lon="-97.7819" data-title="Austin" class="panel panel-default weatherPanel"></weather-panel>
+        <weather-panel data-lat="42.3651" data-lon="-71.0178" data-title="Boston" class="panel panel-default weatherPanel"></weather-panel>
+        <weather-panel data-lat="39.4151" data-lon="-119.656" data-title="Carson" class="panel panel-default weatherPanel clear"></weather-panel>
+        <weather-panel data-lat="38.6268" data-lon="-121.563" data-title="Sacramento" class="panel panel-default weatherPanel"></weather-panel>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../scripts/site.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/components.js -->  
+    <script src="components/weather-panel/weather-panel-component.js"></script>
+    <script src="components/current-time/current-time-component.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
