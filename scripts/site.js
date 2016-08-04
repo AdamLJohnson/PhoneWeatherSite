@@ -60,7 +60,8 @@ function updateBody(el, data)
 	weatherTextElement.innerHTML = '<span class="nowrap">' + data.currentobservation.Temp + ' °F</span>';
 	if (data.currentobservation.Weather != 'NA') {
 		weatherTextElement.innerHTML += ' ' + data.currentobservation.Weather;
-	}		
+	}
+	weatherTextElement.innerHTML += ' <small>(' + data.data.temperature[0] + '°/' + data.data.temperature[1] + '°)</small>';
 	bodyElement.appendChild(weatherTextElement);
 	bodyElement.innerHTML += '<div class="forecastText">' + data.time.startPeriodName[0] + ': ' + data.data.weather[0] + '</div>';
 }
